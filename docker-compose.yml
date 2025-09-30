@@ -22,4 +22,4 @@ services:
     volumes:
       - .:/app
     working_dir: /app
-    command: python demo.py
+    command: python explore_client.py
