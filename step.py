@@ -237,6 +237,11 @@ def read_key():
     if ch == 'w': return 'WRITE_NODE'
     if ch == 'c': return 'COMMENT'
     if ch in ('1', '2', '3', '4'): return ('STEP', int(ch))
+    # Точные повороты
+    if ch == 'a': return 'TURN_LEFT_SMALL'   # π/32 влево
+    if ch == 'd': return 'TURN_RIGHT_SMALL'  # π/32 вправо
+    if ch == 'z': return 'TURN_LEFT_TINY'    # π/64 влево
+    if ch == 'x': return 'TURN_RIGHT_TINY'   # π/64 вправо
     return None
 
 def write_node_comment():
@@ -328,12 +333,17 @@ def main():
     print("  ↑ / ↓      - движение вперёд/назад на 0.5 м")
     print("  → / ←      - поворот вправо/влево на π/16 (11.25°)")
     print("  1/2/3/4    - малые шаги: 0.1/0.2/0.3/0.4 м вперёд")
+    print("")
+    print("  A / D      - точный поворот влево/вправо на π/32 (5.625°)")
+    print("  Z / X      - очень точный поворот влево/вправо на π/64 (2.8°)")
+    print("")
     print("  S          - скан (показать телеметрию и лидар)")
-    print("  W          - ЗАПИСАТЬ УЗЕЛ ГРАФА (с комментарием)")
-    print("  C          - добавить комментарий в лог (без узла)")
+    print("  W          - ЗАПИСАТЬ УЗЕЛ ГРАФА (с координатами)")
+    print("  C          - добавить комментарий в лог")
     print("  Q          - выход")
     print("="*60)
-    print("Совет: используйте W для отметки ключевых точек маршрута")
+    print("Совет: A/D для коррекции курса, Z/X для финальной точности")
+    print("См. STEP_KEYS.md для подробной инструкции")
     print("="*60 + "\n")
 
     print_scan("[STEP] Начальное состояние")
@@ -379,6 +389,26 @@ def main():
             log_print("[STEP] Команда: поворот влево π/16 (11.25°)")
             turn_angle(+math.pi/16)
             print_scan("[STEP] После поворота влево")
+        elif k == 'TURN_RIGHT_SMALL':
+            last_clear_time = now
+            log_print("[STEP] Команда: точный поворот вправо π/32 (5.625°)")
+            turn_angle(-math.pi/32)
+            print_scan("[STEP] После точного поворота вправо")
+        elif k == 'TURN_LEFT_SMALL':
+            last_clear_time = now
+            log_print("[STEP] Команда: точный поворот влево π/32 (5.625°)")
+            turn_angle(+math.pi/32)
+            print_scan("[STEP] После точного поворота влево")
+        elif k == 'TURN_RIGHT_TINY':
+            last_clear_time = now
+            log_print("[STEP] Команда: очень точный поворот вправо π/64 (2.8125°)")
+            turn_angle(-math.pi/64)
+            print_scan("[STEP] После очень точного поворота вправо")
+        elif k == 'TURN_LEFT_TINY':
+            last_clear_time = now
+            log_print("[STEP] Команда: очень точный поворот влево π/64 (2.8125°)")
+            turn_angle(+math.pi/64)
+            print_scan("[STEP] После очень точного поворота влево")
         elif isinstance(k, tuple) and k[0] == 'STEP':
             last_clear_time = now
             step_size = k[1] * 0.1  # 1->0.1, 2->0.2, 3->0.3, 4->0.4
