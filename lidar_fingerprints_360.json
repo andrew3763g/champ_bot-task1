@@ -1,0 +1,277 @@
+[
+  {
+    "name": "0 - start",
+    "coords": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "features": [
+      "TIGHT_CORNER",
+      "CORRIDOR",
+      "ASYMMETRIC_SOUTH"
+    ],
+    "readings": {
+      "NORTH": {
+        "F": 3.63,
+        "L": 0.79,
+        "R": 0.8
+      },
+      "EAST": {
+        "F": 0.98,
+        "L": 1.03,
+        "R": 0.72
+      },
+      "SOUTH": {
+        "F": 6.46,
+        "L": 1.23,
+        "R": 6.03
+      },
+      "WEST": {
+        "F": 0.56,
+        "L": 0.64,
+        "R": 0.57
+      }
+    }
+  },
+  {
+    "name": "2 - diagonal leg begins - i will turn north and scan N-E-S-W",
+    "coords": [
+      -1.99,
+      1.86,
+      452.6
+    ],
+    "features": [
+      "ASYMMETRIC_NORTH",
+      "BLIND_SPOT"
+    ],
+    "readings": {
+      "NORTH": {
+        "F": 5.9,
+        "L": 5.5,
+        "R": 7.62
+      },
+      "EAST": {
+        "F": 4.43,
+        "L": 8.0,
+        "R": 4.19
+      },
+      "SOUTH": {
+        "F": 4.58,
+        "L": 6.15,
+        "R": 4.16
+      },
+      "WEST": {
+        "F": 2.45,
+        "L": 3.18,
+        "R": 2.29
+      }
+    }
+  },
+  {
+    "name": "4 past ducks - N-E-S-W",
+    "coords": [
+      0.99,
+      7.31,
+      454.6
+    ],
+    "features": [
+      "ASYMMETRIC_WEST"
+    ],
+    "readings": {
+      "NORTH": {
+        "F": 2.15,
+        "L": 2.15,
+        "R": 2.53
+      },
+      "EAST": {
+        "F": 2.18,
+        "L": 2.63,
+        "R": 2.15
+      },
+      "SOUTH": {
+        "F": 5.51,
+        "L": 3.33,
+        "R": 3.68
+      },
+      "WEST": {
+        "F": 6.06,
+        "L": 1.07,
+        "R": 7.55
+      }
+    }
+  },
+  {
+    "name": "in 1 meter before gate N-E-S-W",
+    "coords": [
+      -1.71,
+      8.19,
+      522.0
+    ],
+    "features": [
+      "NARROW_PASSAGE",
+      "ASYMMETRIC_NORTH"
+    ],
+    "readings": {
+      "NORTH": {
+        "F": 3.85,
+        "L": 4.76,
+        "R": 1.68
+      },
+      "EAST": {
+        "F": 1.31,
+        "L": 1.29,
+        "R": 1.58
+      },
+      "SOUTH": {
+        "F": 2.89,
+        "L": 1.49,
+        "R": 4.94
+      },
+      "WEST": {
+        "F": 1.63,
+        "L": 2.88,
+        "R": 1.53
+      }
+    }
+  },
+  {
+    "name": "room 2 corridor N-E-S-W",
+    "coords": [
+      -1.9,
+      16.13,
+      450.9
+    ],
+    "features": [
+      "CORRIDOR",
+      "ASYMMETRIC_EAST"
+    ],
+    "readings": {
+      "NORTH": {
+        "F": 4.6,
+        "L": 4.66,
+        "R": 5.35
+      },
+      "EAST": {
+        "F": 1.26,
+        "L": 5.74,
+        "R": 1.23
+      },
+      "SOUTH": {
+        "F": 3.44,
+        "L": 1.78,
+        "R": 5.2
+      },
+      "WEST": {
+        "F": 1.17,
+        "L": 1.55,
+        "R": 1.08
+      }
+    }
+  },
+  {
+    "name": "corner N-E-S-W",
+    "coords": [
+      -6.58,
+      15.61,
+      546.3
+    ],
+    "features": [
+      "SW_CORNER",
+      "CORRIDOR",
+      "ASYMMETRIC_NORTH",
+      "BLIND_SPOT"
+    ],
+    "readings": {
+      "NORTH": {
+        "F": 8.0,
+        "L": 5.89,
+        "R": 2.37
+      },
+      "EAST": {
+        "F": 2.66,
+        "L": 8.0,
+        "R": 0.89
+      },
+      "SOUTH": {
+        "F": 0.49,
+        "L": 0.59,
+        "R": 0.5
+      },
+      "WEST": {
+        "F": 0.84,
+        "L": 0.56,
+        "R": 0.88
+      }
+    }
+  },
+  {
+    "name": "opposite to the mat - N-E-S-W",
+    "coords": [
+      -7.23,
+      19.75,
+      458.9
+    ],
+    "features": [
+      "TIGHT_CORNER",
+      "NARROW_PASSAGE",
+      "ASYMMETRIC_EAST",
+      "BLIND_SPOT"
+    ],
+    "readings": {
+      "NORTH": {
+        "F": 8.0,
+        "L": 6.22,
+        "R": 8.0
+      },
+      "EAST": {
+        "F": 4.91,
+        "L": 5.87,
+        "R": 3.36
+      },
+      "SOUTH": {
+        "F": 0.6,
+        "L": 0.79,
+        "R": 0.56
+      },
+      "WEST": {
+        "F": 1.56,
+        "L": 0.82,
+        "R": 5.05
+      }
+    }
+  },
+  {
+    "name": "last call -N-E-S-W",
+    "coords": [
+      -4.42,
+      20.13,
+      368.1
+    ],
+    "features": [
+      "ASYMMETRIC_NORTH"
+    ],
+    "readings": {
+      "NORTH": {
+        "F": 6.35,
+        "L": 3.5,
+        "R": 6.81
+      },
+      "EAST": {
+        "F": 5.48,
+        "L": 7.59,
+        "R": 4.85
+      },
+      "SOUTH": {
+        "F": 4.01,
+        "L": 5.86,
+        "R": 3.45
+      },
+      "WEST": {
+        "F": 2.94,
+        "L": 4.24,
+        "R": 2.55
+      }
+    }
+  }
+]

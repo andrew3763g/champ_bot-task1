@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd fine-tuning controls and hybrid navigation strategy\n\n**Step.py improvements:**\n- Add π/32 (5.625°) turns: A/D keys for course correction\n- Add π/64 (2.8125°) turns: Z/X keys for final precision\n- Update help menu with new controls\n\n**Documentation:**\n- Create STEP_KEYS.md: comprehensive control guide\n- Include coordinate system reference\n- Add LIDAR interpretation guide (L/R naming quirk)\n- Provide strategy for orthogonal path mapping\n\n**Navigation analysis:**\n- Add step_navigator.py: step-based navigation with coordinate verification\n- Add graph_navigator.py: graph-based navigation (needs optimization)\n- Add analyze_routes.py: route comparison and analysis tool\n\n**Key findings from graph.log:**\n- Current speed too slow: 198s for 4/13 nodes\n- Need adaptive speed: 0.5 m/s on straights, 0.2 m/s in tight spaces\n- Step size: 2m on open areas, 0.2m near obstacles\n- Robot drifts south: accumulation of turn errors\n\n**Next steps:**\n1. Map orthogonal path with precise turns (π/32, π/64)\n2. Implement adaptive speed based on segment type\n3. Add LIDAR-based centering in narrow passages\n4. Full logging with angles and LIDAR data\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(iconv:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
